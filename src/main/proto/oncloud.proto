@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.comlayer";
+option java_outer_classname = "OnCloudProto";
+
+service OnCloudService {
+  rpc sendJsonToOnCloud (SendJsonRequest) returns (SendJsonResponse);
+}
+
+message SendJsonRequest {
+  string json = 1;
+}
+
+message SendJsonResponse {
+  string response = 1;
+}
